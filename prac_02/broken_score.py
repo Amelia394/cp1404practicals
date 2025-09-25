@@ -3,6 +3,7 @@
 CP1404/CP5632 - Practical
 Broken program to determine score status
 """
+
 #input score
 score = float(input("Enter score: "))
 #is it within the bounds 0-100?
