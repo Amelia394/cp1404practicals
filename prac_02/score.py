@@ -4,11 +4,13 @@ CP1404/CP5632 - Practical
 Broken program to determine score status
 """
 
+import random
+
 def main():
-    """Get score and print result"""
-    score = float(input("Enter score: "))
-    result = determine_result(score)
-    print(result)
+    """Get random score and print result"""
+    random_score = random.randint(0, 100)
+    print(f"Random score: {random_score}")
+    print(determine_result(random_score))
 
 def determine_result(score):
     """Return result string based on score value"""
@@ -20,3 +22,5 @@ def determine_result(score):
         print("Passable")
     else:
         print("Bad")
+
+main()
