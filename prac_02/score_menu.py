@@ -50,8 +50,4 @@ def determine_result(score):
     else:
         return "Bad"
 
-
-
-
-
 main()
