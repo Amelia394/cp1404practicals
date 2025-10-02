@@ -6,7 +6,6 @@ Random function testing.
 """
 import random
 
-
 def main():
     """Demonstrate use of random functions with examples and answers in comments."""
     print(random.randint(5, 20))  # Line 1: randint includes both endpoints
