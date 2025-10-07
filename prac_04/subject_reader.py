@@ -8,12 +8,12 @@ FILENAME = "subject_data.txt"
 
 def main():
     input_file = open(FILENAME)
-    data = load_data(input_file)
+    subject_details = load_subject_details(input_file)
     input_file.close()
-    print(data)
+    print(subject_details)
 
 
-def load_data(input_file):
+def load_subject_details(input_file):
     """Read data from file formatted like: subject, lecturer, number of students."""
     subjects = []
     for line in input_file:
