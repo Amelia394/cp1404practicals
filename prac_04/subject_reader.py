@@ -10,7 +10,7 @@ def main():
     input_file = open(FILENAME)
     subject_details = load_subject_details(input_file)
     input_file.close()
-    print(subject_details)
+    display_subject_details(subject_details)
 
 
 def load_subject_details(input_file):
@@ -23,5 +23,11 @@ def load_subject_details(input_file):
         subjects.append(parts)
     return subjects
 
-
+def display_subject_details(subject_details):
+    """Display subject information neatly."""
+    for subject in subject_details:
+        subject_code = subject[0]
+        lecturer = subject[1]
+        num_students = subject[2]
+        print(f"{subject_code} is taught by {lecturer} and has {num_students} students")
 main()
