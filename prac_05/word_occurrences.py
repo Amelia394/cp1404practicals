@@ -7,4 +7,12 @@ Actual:  mins
 
 text = input("Text: ")
 words = text.split()
-print(words)
+word_to_count = {}
+
+for word in words:
+
+    word = word.lower()
+    if word in word_to_count:
+        word_to_count[word] += 1
+    else:
+        word_to_count[word] = 1
