@@ -3,7 +3,7 @@
 CP1404 Practical 4
 email.py
 Estimated: 35 mins
-Actual: mins
+Actual: 30 mins
 """
 
 def main():
