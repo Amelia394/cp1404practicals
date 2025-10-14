@@ -16,3 +16,6 @@ for word in words:
         word_to_count[word] += 1
     else:
         word_to_count[word] = 1
+
+sorted_words = sorted(word_to_count.keys())
+max_length = max(len(word) for word in sorted_words)
