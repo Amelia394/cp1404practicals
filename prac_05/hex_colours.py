@@ -20,7 +20,7 @@ print(CODE_TO_COLOUR)
 
 colour_name = input("Enter colour name: ").upper()
 while colour_name != "":
-    try colour_name in CODE_TO_COLOUR:
+    try:
         print(f"{colour_name} is {CODE_TO_COLOUR[colour_name]}")
     except KeyError:
         print("Invalid colour name")
