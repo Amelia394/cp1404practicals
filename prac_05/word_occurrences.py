@@ -2,7 +2,7 @@
 """
 CP1404 Practical 5
 Estimate: 30 mins
-Actual:  mins
+Actual: 35 mins
 """
 
 text = input("Text: ")
