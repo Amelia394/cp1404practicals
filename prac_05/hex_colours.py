@@ -20,8 +20,8 @@ print(CODE_TO_COLOUR)
 
 colour_name = input("Enter colour name: ").upper()
 while colour_name != "":
-    if colour_name in CODE_TO_COLOUR:
+    try colour_name in CODE_TO_COLOUR:
         print(f"{colour_name} is {CODE_TO_COLOUR[colour_name]}")
-    else:
+    except KeyError:
         print("Invalid colour name")
     colour_name = input("Enter hexadecimal colour code: ").upper()
