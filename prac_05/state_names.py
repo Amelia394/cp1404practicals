@@ -1,5 +1,6 @@
+#Amelia Wilson
 """
-CP1404/CP5632 Practical
+CP1404 Practical 5
 State names in a dictionary
 File reformatted to follow PEP 8 conventions.
 """
