@@ -1,9 +1,10 @@
 #Amelia Wilson
 """
 CP1404 Practical 4
+Ask user for email predict name if name 
 email.py
 Estimated: 35 mins
-Actual: 30 mins
+Actual: 37 mins
 """
 
 def main():
@@ -12,7 +13,7 @@ def main():
     email = input("Email: ").strip()
     while email != "":
         name = extract_name(email)
-        confirmation = input(f"Is your name {name}? (Y/n) ").strip().lower()
+        confirmation = input(f"Is your name {name}? (Y/N) ").strip().lower()
         if confirmation not in ("", "y"):
             name = input("Name: ").title()
         email_to_name[email] = name
@@ -29,4 +30,4 @@ def extract_name(email):
     name = " ".join(parts).title()
     return name
 
-    main()
+main()
