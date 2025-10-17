@@ -30,3 +30,11 @@ def process_records(records):
             champion_to_count.get(record[INDEX_CHAMPION], 0) + 1
         )
     return champion_to_count, countries
+
+def display_results(champion_to_count, countries):
+    """Display champions and countries."""
+    print("Wimbledon Champions:")
+    for name, count in champion_to_count.items():
+        print(name, count)
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
+    print(", ".join(sorted(countries)))
