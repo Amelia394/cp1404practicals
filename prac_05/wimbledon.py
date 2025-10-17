@@ -10,6 +10,12 @@ FILENAME = "wimbledon.csv"
 INDEX_COUNTRY = 1
 INDEX_CHAMPION = 2
 
+def main():
+    """Read data file and print details about Wimbledon champions and countries."""
+    records = load_records(FILENAME)
+    champion_to_count, countries = process_records(records)
+    display_results(champion_to_count, countries)
+
 def load_records(filename):
     """Load records from file in list of lists form."""
     records = []
@@ -38,3 +44,5 @@ def display_results(champion_to_count, countries):
         print(name, count)
     print(f"\nThese {len(countries)} countries have won Wimbledon:")
     print(", ".join(sorted(countries)))
+
+main()
