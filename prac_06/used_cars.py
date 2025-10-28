@@ -15,5 +15,4 @@ def main():
     print(f"Car has fuel: {my_car.fuel}")
     print(my_car)
 
-
 main()
