@@ -7,12 +7,21 @@ actual:
 """
 
 from prac_06.guitar import Guitar
-def main():
-    gibson = Guitar("Gibson L-5 CES", 1922, 16035.40)
-    another = Guitar("Another Guitar", 2013, 765.40)
 
-    print(f"{gibson.name} get_age() - Expected 103. Got {gibson.get_age()}")
-    print(f"{another.name} get_age() - Expected 12. Got {another.get_age()}")
-    print(f"{gibson.name} is_vintage() - Expected True. Got {gibson.is_vintage()}")
-    print(f"{another.name} is_vintage() - Expected False. Got {another.is_vintage()}")
-main()
+def main():
+    """Store and display users guitars."""
+    print("My guitars!")
+
+    # Temporary test data (will replace with input soon)
+    guitars = []
+    guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
+    guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.90))
+
+    # Display all guitars in list
+    print("These are my guitars:")
+    for i, guitar in enumerate(guitars, 1):
+        vintage_string = " (vintage)" if guitar.is_vintage() else ""
+        print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10}{vintage_string}")
+
+if __name__ == "__main__":
+    main()
