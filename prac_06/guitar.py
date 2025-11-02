@@ -3,7 +3,7 @@
 CP1404 Practical 6
 guitar.py
 estimate: 40 min
-actual:
+actual: 34 min
 """
 
 class Guitar:

@@ -3,7 +3,7 @@
 CP1404 Practical 6
 guitar_test.py
 estimate: 40 min
-actual:
+actual:34 min
 """
 
 from prac_06.guitar import Guitar
