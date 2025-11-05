@@ -1,7 +1,7 @@
 #Amelia Wilson
 """
-CP1404 Practical 6
-guitar.csv.py
+CP1404 Practical 7
+guitar.py
 estimate: 40 min
 actual: 34 min
 """
