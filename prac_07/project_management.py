@@ -21,11 +21,27 @@ MENU = """- (L)oad projects
 """
 
 def load_projects(filename):
-    """Stub: will load projects from filename (not implemented yet)."""
-    return []
+    """Load projects and return a list of Projects."""
+    projects = []
+    try:
+        with open(filename, "r") as fh:
+            header = fh.readline()  # skip header
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split("\t")
+                # expected: name, start_date_str (dd/mm/YYYY), priority, cost_estimate, completion
+                name, start_date_str, priority, cost_estimate, completion = parts
+                start_date = datetime.strptime(start_date_str, "%d/%m/%Y").date()
+                projects.append(Project(name, start_date, int(priority),
+                                        float(cost_estimate), int(completion)))
+    except FileNotFoundError:
+        print(f"File {filename} not found. Starting with empty project list.")
+    return projects
 
 def main():
-    print("Welcome to Pythonic Project Management")
+    print("Welcome to Project Management")
     projects = load_projects(FILENAME)
     print(f"Loaded {len(projects)} projects from {FILENAME}")
 
