@@ -85,6 +85,34 @@ def add_new_project(projects):
     projects.append(Project(name, start_date, priority, cost_estimate, completion))
     print("Project added.")
 
+    def update_project(projects):
+        if not projects:
+            print("No projects to update.")
+            return
+        for i, p in enumerate(projects):
+            print(f"{i} {p}")
+        try:
+            choice = int(input("Project choice: ").strip())
+            project = projects[choice]
+        except (ValueError, IndexError):
+            print("Invalid choice.")
+            return
+
+        print(project)
+        new_completion = input("New Percentage: ").strip()
+        new_priority = input("New Priority: ").strip()
+        if new_completion:
+            try:
+                project.completion = int(new_completion)
+            except ValueError:
+                print("Invalid completion value; not changed.")
+        if new_priority:
+            try:
+                project.priority = int(new_priority)
+            except ValueError:
+                print("Invalid priority value; not changed.")
+        print("Project updated.")
+
 def main():
     filename = FILENAME
     projects = load_projects(filename)
@@ -109,6 +137,8 @@ def main():
             filter_projects_by_date(projects)
         elif choice == "a":
             add_new_project(projects)
+        elif choice == "u":
+            update_project(projects)
         else:
             print("Feature not implemented yet.")
 
