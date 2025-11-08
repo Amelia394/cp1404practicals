@@ -60,9 +60,9 @@ def display_projects(projects):
         print(f"  {p}")
 
 def main():
-    print("Welcome to Project Management")
-    projects = load_projects(FILENAME)
-    print(f"Loaded {len(projects)} projects from {FILENAME}")
+    filename = FILENAME
+    projects = load_projects(filename)
+    print(f"Loaded {len(projects)} projects from {filename}")
 
     while True:
         print(MENU)
