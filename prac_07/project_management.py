@@ -1,4 +1,4 @@
-#Amelia Wilson
+# Amelia Wilson
 """
 CP1404 practical 7
 project_management.py
@@ -20,6 +20,7 @@ MENU = """- (L)oad projects
 - (Q)uit
 """
 
+
 def load_projects(filename):
     """Load projects and return a list of Projects."""
     projects = []
@@ -40,6 +41,7 @@ def load_projects(filename):
         print(f"File {filename} not found. Starting with empty project list.")
     return projects
 
+
 def save_projects(filename, projects):
     """Save projects to filename."""
     with open(filename, "w") as fh:
@@ -48,6 +50,7 @@ def save_projects(filename, projects):
             fh.write(f"{p.name}\t{p.start_date.strftime('%d/%m/%Y')}\t"
                      f"{p.priority}\t{p.cost_estimate}\t{p.completion}\n")
     print(f"Saved {len(projects)} projects to {filename}")
+
 
 def display_projects(projects):
     incomplete = sorted([p for p in projects if not p.is_complete()])
@@ -59,6 +62,7 @@ def display_projects(projects):
     for p in complete:
         print(f"  {p}")
 
+
 def filter_projects_by_date(projects):
     date_string = input("Show projects that start after date (dd/mm/yyyy): ").strip()
     try:
@@ -69,6 +73,7 @@ def filter_projects_by_date(projects):
     filtered = [p for p in projects if p.start_date >= filter_date]
     for p in sorted(filtered):
         print(p)
+
 
 def add_new_project(projects):
     print("Let's add a new project")
@@ -85,33 +90,35 @@ def add_new_project(projects):
     projects.append(Project(name, start_date, priority, cost_estimate, completion))
     print("Project added.")
 
-    def update_project(projects):
-        if not projects:
-            print("No projects to update.")
-            return
-        for i, p in enumerate(projects):
-            print(f"{i} {p}")
-        try:
-            choice = int(input("Project choice: ").strip())
-            project = projects[choice]
-        except (ValueError, IndexError):
-            print("Invalid choice.")
-            return
 
-        print(project)
-        new_completion = input("New Percentage: ").strip()
-        new_priority = input("New Priority: ").strip()
-        if new_completion:
-            try:
-                project.completion = int(new_completion)
-            except ValueError:
-                print("Invalid completion value; not changed.")
-        if new_priority:
-            try:
-                project.priority = int(new_priority)
-            except ValueError:
-                print("Invalid priority value; not changed.")
-        print("Project updated.")
+def update_project(projects):
+    if not projects:
+        print("No projects to update.")
+        return
+    for i, p in enumerate(projects):
+        print(f"{i} {p}")
+    try:
+        choice = int(input("Project choice: ").strip())
+        project = projects[choice]
+    except (ValueError, IndexError):
+        print("Invalid choice.")
+        return
+
+    print(project)
+    new_completion = input("New Percentage: ").strip()
+    new_priority = input("New Priority: ").strip()
+    if new_completion:
+        try:
+            project.completion = int(new_completion)
+        except ValueError:
+            print("Invalid completion value; not changed.")
+    if new_priority:
+        try:
+            project.priority = int(new_priority)
+        except ValueError:
+            print("Invalid priority value; not changed.")
+    print("Project updated.")
+
 
 def main():
     filename = FILENAME
@@ -141,7 +148,6 @@ def main():
             update_project(projects)
         else:
             print("Feature not implemented yet.")
-
 
 
 if __name__ == "__main__":
