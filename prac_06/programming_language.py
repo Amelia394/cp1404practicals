@@ -1,7 +1,7 @@
 #Amelia Wilsin
 """
 CP1404 - Practical 6
-programing_language.py
+programming_language.py
 Estimate:45min
 Actual: 1 hr
 """

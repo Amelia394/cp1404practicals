@@ -1,13 +1,13 @@
 #Amelia Wilson
 """
 CP1404 Practical 6
-guitar.py
+guitars.csv.py
 estimate: 40 min
 actual: 34 min
 """
 
 class Guitar:
-    """Represents guitar as a class."""
+    """Represents guitars.csv as a class."""
     def __init__(self, name="", year=0, cost=0):
         self.name = name
         self.year = year
@@ -17,10 +17,10 @@ class Guitar:
         return f"{self.name} ({self.year}): ${self.cost}."
 
     def get_age(self):
-        """Return age of guitar."""
+        """Return age of guitars.csv."""
         current_year = 2025
         return current_year - self.year
 
     def is_vintage(self):
-        """Return True if the guitar is 50 or more years old."""
+        """Return True if the guitars.csv is 50 or more years old."""
         return self.get_age() >= 50
