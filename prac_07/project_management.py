@@ -3,7 +3,7 @@
 CP1404 practical 7
 project_management.py
 estimate: 40 mins
-actual:
+actual: 45 mins
 """
 
 from project import Project
