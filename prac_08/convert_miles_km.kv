@@ -1,0 +1,28 @@
+#up down vertical
+#input and up/down horizontal
+#(input/up/down) and convert and output vertical
+
+BoxLayout:
+    orientation: "vertical"
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_x: 0.25
+        TextInput:
+            id: input_number
+            text: '34'
+            font_size: 48
+            on_text: app.handle_calculate()
+            BoxLayout:
+                orientation: "vertical"
+                Button:
+                    text: "up"
+                Button:
+                    text: "down"
+
+
+    Label:
+        id: km_label
+        font_size: 48
+        text: '54.717'
+        color: (1, 1, 0, 1)
