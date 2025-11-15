@@ -3,24 +3,23 @@
 #(input/up/down) and convert and output vertical
 
 BoxLayout:
-    orientation: "vertical"
-
+    orientation: 'vertical'
     BoxLayout:
-        orientation: "horizontal"
-        size_hint_x: 0.25
+        orientation: 'horizontal'
         TextInput:
             id: input_number
             text: '34'
             font_size: 48
-            on_text: app.handle_calculate()
-            BoxLayout:
-                orientation: "vertical"
-                Button:
-                    text: "up"
-                Button:
-                    text: "down"
-
-
+            on_text: app.handle_calculation()
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.25
+            Button:
+                text: 'up'
+                on_press: app.handle_increment(1)
+            Button:
+                text: 'down'
+                on_press: app.handle_increment(-1)
     Label:
         id: km_label
         font_size: 48
