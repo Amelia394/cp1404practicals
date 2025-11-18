@@ -1,0 +1,30 @@
+#up down vertical
+#input and up/down horizontal
+#(input/up/down) and convert and output vertical
+
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_number
+            text: '34'
+            font_size: 48
+            on_text: app.handle_calculation()
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.25
+            Button:
+                text: 'up'
+                on_press: app.handle_increment(1)
+            Button:
+                text: 'down'
+                on_press: app.handle_increment(-1)
+    Button:
+        text: 'Convert miles to km'
+        font_size: '48'
+    Label:
+        id: km_label
+        font_size: 48
+        text: '54.717'
+        color: (1, 1, 0, 1)
