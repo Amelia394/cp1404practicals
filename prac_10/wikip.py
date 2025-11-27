@@ -1,3 +1,4 @@
+# Amelia Wilson
 """
 CP1404 Practical 10
 Wikipedia API usage with exception handling
@@ -12,7 +13,7 @@ def main():
     while user_input != "":
         try:
             # Try to get the exact page the user requested
-            page = wikipedia.page(user_input)
+            page = wikipedia.page(user_input, autosuggest=False)
 
             print(page.title)
             print(page.summary)
