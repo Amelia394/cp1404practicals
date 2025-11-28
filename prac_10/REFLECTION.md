@@ -32,7 +32,7 @@ A lot of people make similar mistakes, I've even found mistakes in my own work b
 
 ### Explanation
 
-...
+This code review was very interesting to review because it was very clean and worked really well. However, some of the small issues were the "pass" at the end of if statements and some missing docstrings. I hadn't seen this "pass" in the teaching before so I noted that it could be removed.
 
 ### Good Code Review 2
 
@@ -40,7 +40,7 @@ A lot of people make similar mistakes, I've even found mistakes in my own work b
 
 ### Explanation
 
-...
+This was my first code review so i learnt alot about how other people code and this one in particular was missing alot of docstrings. But it wsa very interesting to learn what to look for as mistakes or corrections. 
 
 ## Practicals
 
